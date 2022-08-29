@@ -1,6 +1,6 @@
 # Overview
 
-The `disturbanceGenerator_NT` is a parent module for three children modules that are stand alone: `anthroDisturbance_DataPrep`, `potentialResourcesNT_DataPrep` and `anthroDisturbance_Generator`, the second being idiosyncratic to Northwest Territories data. 
+The `disturbanceGenerator_NT` is a parent module for three children modules that are stand alone: [`anthroDisturbance_DataPrep`](https://github.com/tati-micheletti/anthroDisturbance_DataPrep), [`potentialResourcesNT_DataPrep`](https://github.com/tati-micheletti/potentialResourcesNT_DataPrep) and [`anthroDisturbance_Generator`](https://github.com/tati-micheletti/anthroDisturbance_Generator), the second being idiosyncratic to Northwest Territories data. 
 The other two modules are, however, generic and can be applied in other contexts, potentially without modifications. 
 
 These modules aim at simulating anthropogenic disturbance generation (i.e., mining, oil and gas, forestry, etc.) and were 
