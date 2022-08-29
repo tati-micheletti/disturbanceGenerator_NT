@@ -12,6 +12,10 @@ editor_options:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, eval = FALSE, results = "hold")
+if(!require("Require")){
+    install.packages("Require")
+}
+library("Require")
 ```
 
 # Overview
@@ -229,6 +233,23 @@ This module contains four main events:
 ### Defaults  
 
 This module can be run without any inputs from the user and will automatically default to an example in the Northwest Territories of Canada (i.e., union of BCR6 and NT1).  
+
+# Libraries
+
+The current modules have only been tested with a certain combination of libraries and versions. Please note that the library for the project should be used by all three modules (if all three are used). It is suggested the creation of a central (project level, argument `libPaths`) library location for package installation, which can be done with the following function:  
+
+```{r libraries}
+Require::Require(packageVersionFile = "packageVersions.txt", 
+                 libPaths = file.path(getwd(), 
+                                      "projectLibrary"), 
+                 standAlone = TRUE)
+```
+
+To add this library to the other modules, we suggest the creation of an .Rprofile file containing the information on library location to be loaded _before_ the start of the session (avoiding package unloading or loading of wrong package versions). The code below can be added to the .Rprofile:  
+
+```{r rprof}
+Require::setLibPaths("projectLibrary")
+```
 
 # Usage
 
